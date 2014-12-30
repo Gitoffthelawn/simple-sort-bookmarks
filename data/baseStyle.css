@@ -1,0 +1,163 @@
+/*
+default background: hsl(195, 22%, 96%);
+sunken background: hsl(195, 0%, 96%);
+border color: hsl(195, 100%, 33%);
+*/
+
+body {
+    background-color: hsl(195, 22%, 96%);
+    max-width: 50em;
+    margin: 0 auto;
+}
+dt,
+dd {
+    margin-top: 0.25em;
+    display: inline
+}
+dl {
+    margin: 1em auto;
+}
+dl p {
+    color: gray;
+}
+div#blockOptions div {
+    margin-left: 1em;
+    margin-top: 2em;
+}
+h1 {
+    padding: calc(32px - 0.5em)
+}
+.toolbar button {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+.toolbar:first-Child {
+    margin-left: 0;
+}
+.toolbar:last-Child {
+    margin-right: 0;
+}
+button {
+    padding: 0.5em;
+}
+#buttonClose,
+#buttonCloseDialogSorting {
+    float: right
+}
+#logo {
+    height: 64px;
+    width: 64px;
+    padding: 1em;
+    float: left;
+    margin: 0;
+}
+.dialogCenter #buttonBackup {
+    float: right;
+}
+#blockOptions {
+    margin: 1em
+}
+@media (min-width: 480px) {
+    #blockOptions {
+        margin-left: calc(64px + 2em);
+    }
+}
+#buttonSortAll {
+    float: right;
+}
+#overlay {
+    display: none;
+    background-color: #444444;
+    opacity: 0.9;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 900;
+}
+.dialogCenter {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    margin-left: calc(-240px - 1em);
+    /* half width + half total padding*/
+    height: auto;
+    margin-top: -75px;
+    z-index: 1000;
+    padding: 1em;
+    background-color: hsl(195, 22%, 96%);
+    border-color: hsl(195, 100%, 33%);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 1px 1px 5px;
+}
+/* make full-screen */
+
+@media (max-width: 480px) {
+    .dialogCenter {
+        width: auto;
+        margin-left: 0;
+        left: 0;
+        right: 0;
+    }
+}
+#divBlacklistedFolders {
+    border: 1px solid hsl(195, 100%, 33%);
+    background-color: hsl(195, 0%, 96%);
+    padding: 1em;
+}
+div#blockOptions h3 {
+    margin-left: -1em
+}
+#divAllFolders li {
+    cursor: pointer;
+    list-style-image: url(icon-folder.png)
+}
+#divAllFolders li:hover {
+    background-color: hsl(44, 100%, 77%);
+}
+#elAvailableFolders {
+    border: 1px solid hsl(195, 100%, 33%);
+    background-color: hsl(195, 0%, 96%);
+    overflow: auto;
+    height: calc(100% - 6em);
+}
+#divAllFolders {
+    margin-top: 0;
+    top: 1em;
+    height: 80%;
+}
+.alreadyBlacklisted {
+    color: gray !important;
+    cursor: auto !important;
+    background-color: transparent !important;
+}
+#divBlacklistedFolders button {
+    background-image: url(icon-remove.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+}
+#divBlacklistedFolders li {
+    line-height: 32px;
+    vertical-align: text-bottom;
+    list-style: none
+}
+#divBlacklistedFolders span {
+    /* Aligns the button with the text*/
+    vertical-align: text-top;
+    /* Allow to go to newline nicely if the page is thin*/
+    margin: 0;
+    display: inline-block;
+    width: calc(100% - 48px);
+}
+#dialogSortingMessageComplete {
+    display: none;
+}

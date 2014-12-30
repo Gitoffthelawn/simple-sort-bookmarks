@@ -1,0 +1,62 @@
+{
+    "name": "simple-sort-bookmarks",
+    "title": "SimpleSort Bookmarks",
+    "icon": "data/icon-48.png",
+    "icon64": "data/icon-64.png",
+    "id": "simple-sort-bookmarks@dominiofelice.com",
+    "description": "Sort automatically your bookmarks.",
+    "author": "Nicola Felice",
+    "license": "GPL 3.0",
+    "version": "0.9",
+    "homepage": "https://github.com/ariacorrente/simple-sort-bookmarks",
+    "preferences": [
+        {
+            "title": "Enable automatic sorting",
+            "description": "Every time you add, change or move a bookmark the folder containing the item will be sorted.",
+            "type": "bool",
+            "name": "mustAutoSort",
+            "value": true
+        },
+        {
+            "title": "Sort the folders first",
+            "description": "When sorting the folders will appear before all the bookmarks",
+            "type": "bool",
+            "name": "mustSortFolderFirst",
+            "value": true
+        },
+        {
+            "title": "Sort by",
+            "name": "sortBy",
+            "type": "menulist",
+            "value": 0,
+            "options": [
+                {
+                    "value": "0",
+                    "label": "Title"
+                },
+                {
+                    "value": "1",
+                    "label": "URL"
+                },
+                {
+                    "value": "2",
+                    "label": "Date"
+                }
+            ]
+        },
+        {
+            "title": "Add button to toolbar",
+            "description": "Add a button to access the advanced options in the toolbar.\nThe button can also be moved in the menu using the Firerox's 'Customize' feature",
+            "type": "bool",
+            "name": "isButtonEnabled",
+            "value": true
+        },
+        {
+            "title": "Advanced options",
+            "description": "Open a tab containing the 'Advanced options'.\nAdvanced options allows to sort all bookmarks and blacklist some folders.",
+            "type": "control",
+            "label": "Advanced options",
+            "name": "openAdvancedOptions"
+        }
+    ]
+}

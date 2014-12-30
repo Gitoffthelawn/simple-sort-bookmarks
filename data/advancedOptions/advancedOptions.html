@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>SimpleSort Bookmarks - Advanced options</title>
+    <link rel="stylesheet" href="../baseStyle.css">
+</head>
+
+<body>
+    <img id="logo" src="../icon-64.png" width="64" height="64">
+    <h1>SimpleSort Bookmarks</h1>
+    <div id="blockOptions">
+        <h2>Advanced options</h2>
+        <p>This page gives access to the advanced options and features to keep order in your bookmarks.</p>
+        <p>Other basic options are available through the Firefox add-on preferences interface.</p>
+        <hr>
+
+        <div>
+            <h3>Blacklist of bookmark folders</h3>
+            <p>The folders in this list and their children will not be sorted.</p>
+            <ul id="divBlacklistedFolders"></ul>
+            <button id="buttonAddToBlacklist">Add to blacklist</button>
+            <p>This is usefull if you have a folder where you put temporarly links you prefer to be left sorted by creation time.</p>
+        </div>
+
+        <div>
+            <h3>Sort all bookmarks</h3>
+            <p>If you have a LOT of bookmarks it may take a while to sort everything.</p>
+            <button id="buttonShowConfirmSortAll">Sort all bookmarks</button>
+        </div>
+
+        <button id="buttonClose">Close</button>
+    </div>
+
+    <!-- dialogs and overlay -->
+    <div id="overlay">
+    </div>
+
+    <div id="dialogConfirmSortAll" class="dialogCenter">
+        <p>Before shuffling all your bookmarks maybe you want to do a backup?
+            <br />You know, just in case.</p>
+        <div class="toolbar">
+            <button id="buttonHideDialogConfirmSortAll">Cancel</button>
+            <!-- Buttons below will be displayed in inverted order because of "flaot: right" -->
+            <button id="buttonSortAll">Start sorting</button>
+            <button id="buttonBackup">Backup</button>
+        </div>
+    </div>
+
+    <div id="dialogSorting" class="dialogCenter">
+        <h3>Sorting bookmarks</h3>
+        <p id="dialogSortingMessageSorting">I'm sorting all your bookmarks, this may take some time.</p>
+        <div id="dialogSortingMessageComplete">
+            <p>Sort completed.</p>
+            <div class="toolbar">
+                <button id="buttonCloseDialogSorting">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="divAllFolders" class="dialogCenter">
+        <h3>Available folders:</h3>
+        <div id="elAvailableFolders"></div>
+        <div class="toolbar">
+            <button id="elHideDialogAddToBlacklist">Close</button>
+        </div>
+    </div>
+</body>
+<!--
+Initialy i loaded the script from html and accessed the "port" interface though the global "addon" item.
+From firefox version 36.something it stopped working and i started using the "self" global item.
+<script src="advancedOptions.js"></script> -->
+
+</html>
