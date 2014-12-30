@@ -202,7 +202,8 @@ function addFolderToElBlacklist(folderId, folderTitle) {
     button.addEventListener('click', removeFolderFromElBlacklist);
     li.appendChild(button);
 
-    elPath.innerHTML = folderTitle;
+    elPath.appendChild(document.createTextNode(folderTitle));
+
     li.appendChild(elPath);
 
     if (blacklistedFolders.length === 1) {
