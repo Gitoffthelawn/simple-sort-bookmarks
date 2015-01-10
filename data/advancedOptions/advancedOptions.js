@@ -47,6 +47,7 @@ var buttonCloseDialogSorting = byId("buttonCloseDialogSorting");
 var dialogConfirmSortAll = byId("dialogConfirmSortAll");
 var dialogSorting = byId("dialogSorting");
 var elOverlay = byId("overlay");
+var anchorBaseSettings = byId("anchorBaseSettings");
 
 /*
 Toggle the visibility of the passed element as popup dialog.
@@ -274,6 +275,10 @@ byId("buttonClose").addEventListener('click', function (event) {
 
 buttonCloseDialogSorting.addEventListener("click", function (event) {
     displayPopupElement(dialogSorting, false);
+});
+
+anchorBaseSettings.addEventListener("click", function(event) {
+    self.port.emit("openBaseSettings");
 });
 
 self.port.on("loadBookmarks", function (data) {
