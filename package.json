@@ -7,7 +7,7 @@
     "description": "Sort automatically your bookmarks.",
     "author": "Nicola Felice",
     "license": "GPL 3.0",
-    "version": "0.9.1",
+    "version": "0.10.0",
     "homepage": "https://github.com/ariacorrente/simple-sort-bookmarks",
     "preferences": [
         {
