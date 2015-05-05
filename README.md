@@ -36,8 +36,11 @@ section of Firefox.
 ## Warnings
 
 Backup!
-There isn't a lot of code that can go wrong and I did my best to avoid loss of
-data. However I cant test SimpleSort Bookmarks in your configuration.
+This addon will sort every folder not in the blacklist. If you dont like the
+new order the only way to revert to the previous situation is to restore from
+your backup. There isn't an "undo" feature in this addon and the backup is only
+two clicks away.
+I warmly recommend to save you bookmarks before proceeding.
 
 For now the settings are not synchronized with your Firefox account. If you
 install this addon on multiple devices, remember to configure the blacklisted

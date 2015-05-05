@@ -13,12 +13,19 @@
     <img id="logo" src="../icon-64.png" width="64" height="64">
     <h1>SimpleSort Bookmarks</h1>
     <div id="blockOptions">
-        <h2>Advanced options</h2>
-        <p>This page gives access to the advanced options and features to keep order in your bookmarks.</p>
-        <hr>
+        <div>
+            <h2>Backup your bookmars</h2>
+            <p>This addon will sort every folder not in the blacklist. If you
+                dont like the new order the only way to revert to the previous
+                situation is to restore from your backup. There isn't an
+                <samp>undo</samp> feature in this addon and the backup is only
+                two clicks away.</p>
+            <p>I warmly recommend to save you bookmarks before proceeding.</p>
+            <button id="buttonBackup">Backup</button>
+        </div>
 
         <div>
-            <h3>Blacklist of bookmark folders</h3>
+            <h2>Blacklist of bookmark folders</h2>
             <p>The folders in this list and their children will not be sorted.</p>
             <ul id="divBlacklistedFolders"></ul>
             <button id="buttonAddToBlacklist">Add to blacklist</button>
@@ -26,7 +33,7 @@
         </div>
 
         <div>
-            <h3>Sort all bookmarks</h3>
+            <h2>Sort all bookmarks</h2>
             <p>If you have a LOT of bookmarks it may take a while to sort everything.</p>
             <button id="buttonShowConfirmSortAll">Sort all bookmarks</button>
         </div>
@@ -48,7 +55,7 @@
             <button id="buttonHideDialogConfirmSortAll">Cancel</button>
             <!-- Buttons below will be displayed in inverted order because of "flaot: right" -->
             <button id="buttonSortAll">Start sorting</button>
-            <button id="buttonBackup">Backup</button>
+            <button id="buttonBackupInDialog">Backup</button>
         </div>
     </div>
 

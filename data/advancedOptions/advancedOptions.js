@@ -268,6 +268,10 @@ byId("buttonBackup").addEventListener('click', function (event) {
     self.port.emit("backup");
 });
 
+byId("buttonBackupInDialog").addEventListener('click', function (event) {
+    self.port.emit("backup");
+});
+
 byId("buttonClose").addEventListener('click', function (event) {
     self.port.removeListener("sortStarted", sortStartedCallback);
     self.port.emit("close");
